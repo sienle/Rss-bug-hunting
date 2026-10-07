@@ -57,7 +57,7 @@ function increaseQty(id) {
 
 function decreaseQty(id) {
   const item = cart.find((i) => i.id === id);
-  item.qty--;
+  item.qty = Math.max(1, item.qty - 1);
   renderCart();
 }
 
